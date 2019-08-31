@@ -1,0 +1,9 @@
+$pp-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$pp-black-accent: mat-palette($mat-blue-grey, 400);
+$pp-black-warn: mat-palette($mat-red, 500);
+
+$pp-black-theme: mat-dark-theme(
+    $pp-black-primary,
+    $pp-black-accent,
+    $pp-black-warn
+);

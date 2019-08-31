@@ -1,0 +1,20 @@
+<mat-table *ngIf="dataSource" [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="month">
+    <mat-header-cell *matHeaderCellDef> month</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.month}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="budget">
+    <mat-header-cell *matHeaderCellDef> Budget</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.budget}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="realized">
+    <mat-header-cell *matHeaderCellDef> Realized</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.realized | number:'0.0-2'}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
