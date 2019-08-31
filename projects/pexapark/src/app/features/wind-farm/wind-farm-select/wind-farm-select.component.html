@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-select #windFarm>
+    <mat-option value="windFarm1">Wind Farm 1</mat-option>
+    <mat-option value="windFarm2">Wind Farm 2</mat-option>
+  </mat-select>
+</mat-form-field>
+<button (click)="windFarmChanged(windFarm.value)" mat-stroked-button color="primary">Apply</button>
+
